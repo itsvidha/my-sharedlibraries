@@ -4,14 +4,14 @@ def call(Map pipelineParams){
         pipeline {
         agent any 
         environmet{
-            appname= ${pipelineParams.appname}
+            appName= ${pipelineParams.appname}
         }
         stages{
             stage('AdditionStage'){
                 steps{
                     echo("printing sum of 2 numbers")
                     println calculator.add(10,20)
-                    echo "this is ${appname}"
+                    echo "this is ${appName}"
                 }
             }
             stage('MultiplyingStage'){
